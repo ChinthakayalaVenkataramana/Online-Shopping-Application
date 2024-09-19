@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta content="width=device-width,inicial-scale=1.0" name="viewport">
+<title>MyShop</title>
+</head>
+<body>
+<form action="login" method="post" class="login">
+<h1>Login</h1>
+Enter Email:<input type="email" name="mail" required>
+Password :<input type="password" name="pword1"  required id="show"><br>
+<div><input type="checkbox" onclick="function1()" name="ffdsf" id="show1">Show Password</div><br>
+<a href="CUSTOMER_Forgot.html">Forgot password</a>
+<input type="submit" value="Login" id='sub'><div>I Have No Account&nbsp;?<a href="CUSTOMER_Register.html">Create</a></div>
+</form>
+</body>
+<script>
+function function1(){
+	let ss=document.getElementById("show");
+	if(ss.type=="password"){
+		ss.type="text";
+	}else{
+		ss.type="password";
+	}
+}
+</script>
+<style>
+#show1{
+width:20px;
+}
+.login{
+border:1px solid black;
+width:350px;
+height:400px;
+background:url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=background-blur-clean-531880.jpg&fm=jpg');
+color:white;
+border-radius:20px;
+box-shadow:0px 0px 20px rbga(0,0,0,0.75);
+background-size:cover;
+background-position:center;
+overflow:hiden;
+}
+form{
+display:black;
+box-sizing:border-box;
+padding:0px;
+height:80%;
+width:100%;
+backdrop-filter:brightness(70%);
+flex-direction:column;
+display:flex;
+gap:0px;
+}
+h1{
+color:white;
+font-weight:normal;
+font-size:200%;
+text-shadow:0px 0px 2px rgba(0,0,0,0.5);
+background-color:black;
+padding-left:95px;
+}
+input{
+background:rgba(255, 255, 255,0.3 );
+height:30px;
+line-height:5px;
+border-radius:20px;
+padding:0px 10px;
+border:none;
+margin-bottom:20px;
+color:white;
+}
+#sub{
+background:rbg(45,126,231);
+height:40px;
+border-radius:40px;
+border:none;
+margin:5px opx;
+box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+color:white;
+font-size:12px;
+text-transform:uppercase;
+background-color:blue;
+}
+a{
+color:yellow;
+}
+
+</style>
+</html>

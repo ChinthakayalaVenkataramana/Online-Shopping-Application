@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MyShop</title>
+</head>
+<body style="display:flex;  width:100%;  flex-wrap:wrap; text-align: center;">
+<div id="center">
+<form action="register" method="post" class="register">
+<h1>Registration</h1>
+<b>First Name : <input type="text" name="fname"><br>
+Last Name  : <input type="text" name="lname"><br>
+Phone No   : <input type="tel" name="phno" pattern=[0-9]{10} required><br>
+Pin Code   :<input type="text" name="pin"pattern=[0-9]{6}><br>
+Mail Id    : <input type="email" name="mail"><br>
+Password   : <input type="password" name="pword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required id="show"><br>
+<input type="checkbox" name="ggo" onclick="function1()" id="show1">Show Password<br>
+Mandal     : <input type="text" name="mandal"><br>
+District   : <input type="text" name="dist"><br>
+Village    : <input type="text" name="vilg"></b>
+ <input type="submit" value="Regisrter" id="sub">I Have Already Account?<a href="CUSTOMER_Login.html">Login</a>
+</form>
+</div>
+</body>
+<script>
+function function1(){
+	var show=document.getElementById("show");
+	if(show.type=="password"){
+		show.type="Text";
+	}else{
+		show.type="password";
+	}
+}
+</script>
+<style>
+#show1{
+width:20px;
+}
+.register{
+border:1px solid black;
+width:250px;
+height:600px;
+background:url('https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?cs=srgb&dl=clouds-cloudy-countryside-236047.jpg&fm=jpg');
+color:white;
+border-radius:20px;
+box-shadow:0px 0px 20px rbga(0,0,0,0.75);
+background-size:cover;
+background-position:center;
+overflow:hiden;
+padding-left:20px;
+}
+form{
+display:black;
+color:black;
+box-sizing:border-box;
+padding:0px;
+height:80%;
+width:50%;
+backdrop-filter:brightness(30%);
+flex-direction:column;
+display:flex;
+
+}
+h1{
+color:white;
+font-weight:normal;
+font-size:250%;
+text-shadow:0px 0px 2px rgba(0,0,0,0.5);
+background-color:black;
+
+}
+input{
+background:rgba(245, 255, 255,0.5);
+height:25px;
+line-height:10px;
+border-radius:20px;
+padding:0px 20px;
+border:none;
+color:black;
+}
+#sub{
+background:rbg(45,126,231);
+height:40px;
+line-height:4px;
+border-radius:40px;
+border:none;
+margin:10px 0px;
+box-shadow:0px 0px 5px rgba(0,0,0,0.3);
+color:white;
+font-size:22px;
+text-transform:uppercase;
+background-color:blue;
+}
+a{
+color:yellow;
+}
+#center{
+flex-direction:column;
+justify-content:center;
+}
+
+</style>
+</html>
